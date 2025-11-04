@@ -1,0 +1,157 @@
+/* ==== STYLE.CSS - UTS PREMIUM FINAL ==== */
+:root {
+  --primary1: #6c63ff;
+  --accent: #9f9fed;
+  --light-bg: #f8f9fa;
+  --dark-bg: #1a1a1a;
+  --text-dark: #222;
+  --text-light: #f1f1f1;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  scroll-behavior: smooth;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+/* Navbar */
+.navbar-brand { font-size: 1.4rem; }
+.text-accent { color: var(--accent); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #6c63ff, #8a85f5);
+  min-height: 100vh;
+  padding-top: 100px;
+  transition: background 0.6s ease;
+}
+.foto-profil {
+  border-radius: 50%;
+  border: 4px solid #fff;
+  transition: transform 0.4s;
+}
+.foto-profil:hover { transform: scale(1.05); }
+.hero-title { font-weight: 700; }
+.highlight { color: #fff176; }
+
+/* Buttons */
+.btn-custom {
+  background: #fff;
+  color: #6c63ff;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.btn-custom:hover { background: #d9d6ff; }
+.btn-outline-custom {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.btn-outline-custom:hover {
+  background: #fff;
+  color: #6c63ff;
+}
+
+/* Sections */
+.section { padding: 80px 0; }
+.section-title {
+  font-weight: 700;
+  color: var(--primary1);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Biodata */
+.biodata li { display: flex; padding: 5px 0; }
+.biodata .label { width: 140px; font-weight: 600; }
+.biodata .value { flex: 1; }
+
+/* Tombol Mode */
+.mode-toggle {
+  position: fixed;
+  top: 90px;
+  right: 25px;
+  background: #ffffffcc;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mode-toggle i { font-size: 1.3rem; color: #333; }
+.mode-toggle:hover { transform: scale(1.1); background: #f0f0f0; }
+
+/* Tombol Scroll ke Atas */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--primary1);
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-top-btn:hover {
+  transform: scale(1.1);
+  background: #8a85f5;
+}
+
+/* Footer */
+footer { background: #2c2c2c; transition: background 0.6s ease; }
+
+/* Dark Mode */
+body.dark {
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+body.dark .navbar,
+body.dark footer {
+  background: #111;
+}
+body.dark .hero {
+  background: linear-gradient(135deg, #222, #333);
+}
+body.dark .btn-custom {
+  background: #9f9fed;
+  color: #fff;
+}
+body.dark .btn-outline-custom {
+  border-color: #9f9fed;
+  color: #9f9fed;
+}
+body.dark .btn-outline-custom:hover {
+  background: #9f9fed;
+  color: #fff;
+}
